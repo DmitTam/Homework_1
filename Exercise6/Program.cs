@@ -5,12 +5,12 @@
 
 Console.WriteLine("Введите целое число");
 int number = Convert.ToInt32(Console.ReadLine());
-int A = number % 2;
-if (A == 0)
+int a = number % 2;
+if (a == 0)
 {
     Console.WriteLine(" -> да");
 }
 else
 {
     Console.WriteLine(" -> нет");
-};
+}

@@ -9,12 +9,12 @@ if (number > 1)
 {
     while (count < number)
     {
-        int A = count % 2;
+        int a = count % 2;
         if (count+2 <= number)
-        if (A == 0)
+        if (a == 0)
         {
             Console.Write($"{count+2} ");
-        };
+        }
         count++;
     }
-};
+}

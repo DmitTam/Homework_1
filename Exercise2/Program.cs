@@ -16,4 +16,4 @@ else if (number1 < number2)
 else 
 {
     Console.WriteLine($"{number2} = {number1}");
-};
+}
