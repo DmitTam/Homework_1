@@ -6,18 +6,16 @@
 
 int SecondDigit(int num)
 {
-    // int secondDigit = num / 10 % 10;
     return num / 10 % 10;
-    // Console.WriteLine($"-> {secondDigit}");
 }
 
-Console.WriteLine("Введите трехзначное число");
+Console.WriteLine("Введите положительное трехзначное число");
 int number = Convert.ToInt32(Console.ReadLine());
-while (number >0)
+
+if (number <100 || number >= 1000)
 {
-    if (number <100) Console.WriteLine("Некорректный ввод");
-    if (number >= 1000) Console.WriteLine("Некорректный ввод");
-    break;
+    Console.WriteLine ("Некорректный ввод");
+    return;
 }
 
 int a = SecondDigit(number);
