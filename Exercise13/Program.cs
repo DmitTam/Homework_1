@@ -4,33 +4,57 @@
 // 32679 -> 6
 
 
-int ThirdDigit(int num)
+// int ThirdDigit(int num)
+// {
+//     return num % 10;
+// }
+
+// Console.WriteLine("Введите число");
+// int number = Convert.ToInt32(Console.ReadLine());
+
+// if (number <100) 
+// {
+//     Console.WriteLine("-> третьей цифры нет");
+//     return;
+// }
+
+// if (number >1000)
+// {
+
+// }
+// int a = ThirdDigit(number);
+// Console.WriteLine($"-> {a}");
+
+
+int Promt(string message)
 {
-    // int secondDigit = num / 10 % 10;
-    return num % 10;
-    // Console.WriteLine($"-> {secondDigit}");
+    Console.Write(message);
+    string value = Console.ReadLine();
+    int result = Convert.ToInt32(value);
+    return result;
 }
 
-Console.WriteLine("Введите число");
-int number = Convert.ToInt32(Console.ReadLine());
-
-if (number <100) 
+int GetThirdRank(int number)
 {
-    Console.WriteLine("-> третьей цифры нет");
-    return;
+    while (number > 999)
+    {
+        number /= 10;
+    }
+    return number % 10;
 }
 
-if (number >1000)
+bool ValidateNumber(int number)
 {
-    
+    if (number < 100)
+    {
+        Console.WriteLine("Третьей цифры нет");
+        return false;
+    }
+    return true;
 }
-int a = ThirdDigit(number);
-Console.WriteLine($"-> {a}");
 
-
-
-
-
-
-
-
+int number = Promt("Введите число > ");
+if (ValidateNumber(number))
+{
+    Console.WriteLine(GetThirdRank(number));
+}
