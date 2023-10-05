@@ -26,7 +26,12 @@ public class Answer
 {
    static void ShowCube(int N)
     {
-      // Введите свое решение ниже
+        int count = 1;
+        while (count <= N)
+        {
+          Console.WriteLine($" {count * count * count}"); 
+          count++; 
+        }
         
     }
 
@@ -38,7 +43,7 @@ public class Answer
             N = int.Parse(args[0]);
         } else {
            // Здесь вы можете поменять значения для отправки кода на Выполнение
-            N = 6;
+            N = 3;
         }
 
         // Не удаляйте строки ниже
